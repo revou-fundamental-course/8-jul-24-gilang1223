@@ -1,0 +1,180 @@
+body{
+    padding:0;
+    margin:0;
+    background-color:#17153B;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width:100%;
+    overflow-x: hidden;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: #2E236C;
+    width:100%;
+    height:10vh;
+    align-items: center;
+}
+/* peringatan */
+#info-awal{
+    padding-left:9vw ;
+}
+/* alert */
+#alert{
+    background-color: rgba(128, 128, 128, 0.5);
+    backdrop-filter:blur(10px);
+    position: absolute;
+    height:100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform:scale(0);
+}
+#alert button{
+    position: absolute;
+    background-color:red;
+    font-size: larger;
+    border:red solid;
+    border-radius:5px;
+    top:5px;
+    right:5px;
+}
+.konten-alert{
+    position: relative;
+    background-color: #17153B;
+    padding:10px;
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(1);
+}
+#alert.alert-aktif{
+    transform:scale(1);
+}
+/* end alert */
+#container1{
+    display: flex;
+    gap:5vw;
+    width:100dvw;
+    justify-content: center;
+    padding:3vh;
+    align-items: center;
+}
+.kalkulator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.kalkulator form{
+    border-radius:15px;
+    border:solid #2E236C;
+    /* background-image:url('../aset/background-bmi.jpg'); */
+    padding:10px;
+    background-color:#2E236C;
+    backdrop-filter:blur('10px');
+    border-radius:10px;
+}
+.kalkulator form .input-box{
+    margin-bottom:3vh;
+    border-radius:5px;
+    height:5vh;
+    padding:5px;
+    font-size:large;
+    background-color: #433D8B;
+    border:1px solid #2E236C;
+    color:white;
+    outline: #17153B;
+}
+.tombol-submit{
+    color:white;
+    padding:5px;
+    width:30%;
+    background-color: #C80036;
+    border:solid #271e5b;
+    border-radius:5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.tombol-reset{
+    color:white;
+    width:30%;
+    padding:5px;
+    background-color: #2e236c00;
+    border-radius:5px;
+    border:1px solid #C80036;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.hasil{
+    background-color: #2E236C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    width:45vw;
+    height:50vh;
+    border-radius:15px;
+}
+.hasil #hasil-bmi{
+    font-size: x-large;
+    width:40%;
+    height:18vh;
+    background-color: #433D8B;
+    border-radius:15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hasil #penjelasan{
+    background-color: #433D8B;
+    padding:10px;
+    border-radius:20px;
+}
+
+/* info umum */
+.info-umum{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+#konten-infoUmum{
+    background-color:#433D8B;
+    padding:10px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    gap:10px;
+    height: 0;
+    transition: 0.5s;
+    transform:scale(0);
+}
+#konten-infoUmum .peringatan{
+    width:20vw;
+    padding:5px;
+    border-radius:10px;
+    border:3px solid #271e5b;
+}
+#konten-infoUmum .konten{
+    width:30vw;
+}
+#konten-infoUmum.aktif{
+    transform: scale(1);
+    height:100%;
+}
+#konten-infoUmum .tombol a{
+    color:white;
+    background-color:#C80036;
+    border-radius:5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+#konten-infoUmum .tombol a{
+    text-decoration: none;
+    color:white;
+    font-weight: 400;
+}
+#konten-infoUmum .tombol a:hover{
+background-color: #2E236C;
+}

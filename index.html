@@ -1,0 +1,77 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>kalkulator bmi</title>
+</head>
+<body>
+    <nav>
+        <h1>kalkulator BMI</h1>
+    </nav>
+    <!-- alert -->
+     <div id="alert">
+        <div class="konten-alert">
+            <button type="button" id="close" onclick="reset()">&times;</button>
+            <img src="./aset/warning.png" style="width:100px; height:100px;">
+            <h2>anda masih dibawah 18 tahun</h2>
+        </div>
+     </div>
+    <!-- end alert -->
+     <section id="info-awal">
+        <h2>peringatan!</h2>
+        <p>perempuan sedang mengandung atau menyusui dilarang mengunakan kalkulator ini</p>
+     </section>
+    <div id="container1">
+        <section class="kalkulator">
+            <form onsubmit="main(event)">
+                <p>jenis kelamin</p>
+                <input type="radio" name="jenis_kelamin" id="laki-laki">
+                <label for="laki-laki">laki laki</label>
+                <input type="radio" name="jenis_kelamin" id="perempuan">
+                <label for="perempuan">perempuan</label>
+                <div style="margin-top:5px;">
+                    <label for="tinggi-badan">tinggi badan</label><br>
+                    <input type="number"  id="tinggi-badan"class="input-box" placeholder="tinggi (cm)" required>
+                </div>
+                <div>
+                    <label for="berat-badan">berat badan</label><br>
+                    <input type="number"id="berat-badan"class="input-box" placeholder="berat (kg)" required>
+                </div>
+                <div>
+                    <label for="usia">usia</label><br>
+                    <input type="number" id="usia" class="input-box" placeholder="minimal (18 tahun)" required>
+                </div>
+                <button id="submit" class="tombol-submit">submit</button>
+                <button type="reset" id="reset" class="tombol-reset" onclick="reset()">reset</button>
+            </form>
+        </section>
+        <section class="hasil">
+            <h1>BMI mu adalah</h1>
+            <h3 id="hasil-bmi">00.00</h3>
+            <p id="penjelasan">penjelasan</p>
+        </section>
+    </div>
+    <section class="info-umum">
+        <div id="konten-infoUmum">
+            <div class="konten">
+                <h1>resiko penyakit</h1>
+                <p id="resiko-penyakit"></p>
+                <h2>cara mengatasi</h2>
+                <p id="solusi"></p>
+            </div>
+            <div class="peringatan">
+                <h1>peringatan</h1>
+                <p>
+                    Informasi BMI hanya memberikan gambaran umum tentang status kesehatan seseorang dan tidak dapat menggantikan penilaian medis yang komprehensif. Setiap individu memiliki kebutuhan dan kondisi kesehatan yang unik, sehingga sangat penting untuk berkonsultasi dengan dokter atau ahli gizi untuk mendapatkan penilaian dan saran yang lebih spesifik. Jangan ragu untuk menanyakan lebih lanjut ke profesional kesehatan untuk mendapatkan panduan yang tepat.
+                </p>
+                <p>untuk tau lebih lanjut klik tombol dibawah ini</p>
+                <div class="tombol">
+                    <a href="https://www.alodokter.com/komunitas/diskusi/penyakit" target="_blank">konsul ahli gizi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/index2.js"></script>
+</body>
+</html>
